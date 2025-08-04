@@ -1,0 +1,16 @@
+name: opti-de-redes
+channels:
+  - conda-forge
+  - gurobi
+dependencies:
+  - python=3.13
+  - numpy
+  - matplotlib
+  - pandas
+  - scipy
+  - gurobipy
+  - cobra
+  - wcwidth
+  - jupyter
+  - ipykernel
+  - seaborn
