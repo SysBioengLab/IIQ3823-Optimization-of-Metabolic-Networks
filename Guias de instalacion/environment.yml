@@ -8,7 +8,7 @@ dependencies:
   - matplotlib
   - pandas
   - scipy
-  - gurobipy
+  - gurobi
   - cobra
   - wcwidth
   - jupyter
