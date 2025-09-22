@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:groups="http://www.sbml.org/sbml/level3/version1/groups/version1" metaid="meta_" sboTerm="SBO:0000624" level="3" version="1" fbc:required="false" groups:required="false">
+  <model metaid="meta_model" id="model" fbc:strict="true">
+    <listOfUnitDefinitions>
+      <unitDefinition id="mmol_per_gDW_per_hr">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="gram" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="c" name="c" constant="true"/>
+      <compartment id="e" name="e" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="M_13dpg__91__c__93__" name="3-Phospho-D-glyceroyl-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H4O10P2"/>
+      <species id="M_2pg__91__c__93__" name="D-Glycerate-2-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H4O7P"/>
+      <species id="M_3pg__91__c__93__" name="3-Phospho-D-glycerate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H4O7P"/>
+      <species id="M_6pgc__91__c__93__" name="6-Phospho-D-gluconate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H10O10P"/>
+      <species id="M_6pgl__91__c__93__" name="6-phospho-D-glucono-1-5-lactone" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H9O9P"/>
+      <species id="M_ac__91__c__93__" name="Acetate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H3O2"/>
+      <species id="M_ac__91__e__93__" name="Acetate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H3O2"/>
+      <species id="M_acald__91__c__93__" name="Acetaldehyde" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H4O"/>
+      <species id="M_acald__91__e__93__" name="Acetaldehyde" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H4O"/>
+      <species id="M_accoa__91__c__93__" name="Acetyl-CoA" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C23H34N7O17P3S"/>
+      <species id="M_acon__45__C__91__c__93__" name="cis-Aconitate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H3O6"/>
+      <species id="M_actp__91__c__93__" name="Acetyl-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H3O5P"/>
+      <species id="M_adp__91__c__93__" name="ADP" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C10H12N5O10P2"/>
+      <species id="M_akg__91__c__93__" name="2-Oxoglutarate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H4O5"/>
+      <species id="M_akg__91__e__93__" name="2-Oxoglutarate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H4O5"/>
+      <species id="M_amp__91__c__93__" name="AMP" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C10H12N5O7P"/>
+      <species id="M_atp__91__c__93__" name="ATP" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C10H12N5O13P3"/>
+      <species id="M_cit__91__c__93__" name="Citrate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H5O7"/>
+      <species id="M_co2__91__c__93__" name="CO2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="CO2"/>
+      <species id="M_co2__91__e__93__" name="CO2" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="CO2"/>
+      <species id="M_coa__91__c__93__" name="Coenzyme-A" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C21H32N7O16P3S"/>
+      <species id="M_dhap__91__c__93__" name="Dihydroxyacetone-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H5O6P"/>
+      <species id="M_e4p__91__c__93__" name="D-Erythrose-4-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H7O7P"/>
+      <species id="M_etoh__91__c__93__" name="Ethanol" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H6O"/>
+      <species id="M_etoh__91__e__93__" name="Ethanol" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H6O"/>
+      <species id="M_f6p__91__c__93__" name="D-Fructose-6-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H11O9P"/>
+      <species id="M_fdp__91__c__93__" name="D-Fructose-1-6-bisphosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H10O12P2"/>
+      <species id="M_for__91__c__93__" name="Formate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="CH1O2"/>
+      <species id="M_for__91__e__93__" name="Formate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="CH1O2"/>
+      <species id="M_fru__91__e__93__" name="D-Fructose" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6"/>
+      <species id="M_fum__91__c__93__" name="Fumarate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H2O4"/>
+      <species id="M_fum__91__e__93__" name="Fumarate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H2O4"/>
+      <species id="M_g3p__91__c__93__" name="Glyceraldehyde-3-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H5O6P"/>
+      <species id="M_g6p__91__c__93__" name="D-Glucose-6-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H11O9P"/>
+      <species id="M_glc__45__D__91__e__93__" name="D-Glucose" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6"/>
+      <species id="M_gln__45__L__91__c__93__" name="L-Glutamine" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H10N2O3"/>
+      <species id="M_gln__45__L__91__e__93__" name="L-Glutamine" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H10N2O3"/>
+      <species id="M_glu__45__L__91__c__93__" name="L-Glutamate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H8NO4"/>
+      <species id="M_glu__45__L__91__e__93__" name="L-Glutamate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H8NO4"/>
+      <species id="M_glx__91__c__93__" name="Glyoxylate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C2H1O3"/>
+      <species id="M_h2o__91__c__93__" name="H2O" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H2O"/>
+      <species id="M_h2o__91__e__93__" name="H2O" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H2O"/>
+      <species id="M_h__91__c__93__" name="H" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H"/>
+      <species id="M_h__91__e__93__" name="H" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H"/>
+      <species id="M_icit__91__c__93__" name="Isocitrate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H5O7"/>
+      <species id="M_lac__45__D__91__c__93__" name="D-Lactate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H5O3"/>
+      <species id="M_lac__45__D__91__e__93__" name="D-Lactate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H5O3"/>
+      <species id="M_mal__45__L__91__c__93__" name="L-Malate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H4O5"/>
+      <species id="M_mal__45__L__91__e__93__" name="L-Malate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H4O5"/>
+      <species id="M_nad__91__c__93__" name="Nicotinamide-adenine-dinucleotide" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C21H26N7O14P2"/>
+      <species id="M_nadh__91__c__93__" name="Nicotinamide-adenine-dinucleotide-reduced" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C21H27N7O14P2"/>
+      <species id="M_nadp__91__c__93__" name="Nicotinamide-adenine-dinucleotide-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C21H25N7O17P3"/>
+      <species id="M_nadph__91__c__93__" name="Nicotinamide-adenine-dinucleotide-phosphate-reduced" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C21H26N7O17P3"/>
+      <species id="M_nh4__91__c__93__" name="Ammonium" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H4N"/>
+      <species id="M_nh4__91__e__93__" name="Ammonium" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H4N"/>
+      <species id="M_o2__91__c__93__" name="O2" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="O2"/>
+      <species id="M_o2__91__e__93__" name="O2" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="O2"/>
+      <species id="M_oaa__91__c__93__" name="Oxaloacetate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H2O5"/>
+      <species id="M_pep__91__c__93__" name="Phosphoenolpyruvate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H2O6P"/>
+      <species id="M_pi__91__c__93__" name="Phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="HO4P"/>
+      <species id="M_pi__91__e__93__" name="Phosphate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="HO4P"/>
+      <species id="M_pyr__91__c__93__" name="Pyruvate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H3O3"/>
+      <species id="M_pyr__91__e__93__" name="Pyruvate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C3H3O3"/>
+      <species id="M_q8__91__c__93__" name="Ubiquinone-8" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C49H74O4"/>
+      <species id="M_q8h2__91__c__93__" name="Ubiquinol-8" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C49H76O4"/>
+      <species id="M_r5p__91__c__93__" name="alpha-D-Ribose-5-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H9O8P"/>
+      <species id="M_ru5p__45__D__91__c__93__" name="D-Ribulose-5-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H9O8P"/>
+      <species id="M_s7p__91__c__93__" name="Sedoheptulose-7-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C7H13O10P"/>
+      <species id="M_succ__91__c__93__" name="Succinate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H4O4"/>
+      <species id="M_succ__91__e__93__" name="Succinate" compartment="e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C4H4O4"/>
+      <species id="M_succoa__91__c__93__" name="Succinyl-CoA" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C25H35N7O19P3S"/>
+      <species id="M_xu5p__45__D__91__c__93__" name="D-Xylulose-5-phosphate" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H9O8P"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_lb" value="-1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_ub" value="1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="minus_inf" value="-INF" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="plus_inf" value="INF" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_ATPM_lower_bound" value="8.39" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_EX_glc__40__e__41___lower_bound" value="-10" units="mmol_per_gDW_per_hr" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="R_ACALD" name="acetaldehyde dehydrogenase (acetylating)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_acald__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0351"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1241"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ACALDt" name="acetaldehyde reversible transport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_acald__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_acald__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_s0001"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ACKr" name="acetate kinase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_ac__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_actp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3115"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2296"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1849"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ACONTa" name="aconitase (half-reaction A, Citrate hydro-lyase)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_cit__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_acon__45__C__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0118"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1276"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ACONTb" name="aconitase (half-reaction B, Isocitrate hydro-lyase)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_acon__45__C__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_icit__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0118"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1276"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ACt2r" name="acetate reversible transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_ac__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_ac__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_ADK1" name="adenylate kinase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_amp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="2" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b0474"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_AKGDH" name="2-Oxoglutarate dehydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succoa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b0116"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0726"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0727"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_AKGt2r" name="2-oxoglutarate reversible transport via symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_akg__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b2587"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ALCD2x" name="alcohol dehydrogenase (ethanol)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_etoh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_acald__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0356"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1478"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1241"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ATPM" name="ATP maintenance requirement" reversible="false" fast="false" fbc:lowerFluxBound="R_ATPM_lower_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_ATPS4r" name="ATP synthase (four protons for one ATP)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="4" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="3" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b3736"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3737"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3738"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3731"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3732"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3733"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3734"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3735"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b3736"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3737"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3738"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3731"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3732"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3733"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3734"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3735"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3739"/>
+            </fbc:and>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_Biomass_Ecoli_core_w_GAM" name="Biomass Objective Function with GAM" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_3pg__91__c__93__" stoichiometry="1.496" constant="true"/>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="3.7478" constant="true"/>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="59.81" constant="true"/>
+          <speciesReference species="M_e4p__91__c__93__" stoichiometry="0.361" constant="true"/>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="0.0709" constant="true"/>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="0.129" constant="true"/>
+          <speciesReference species="M_g6p__91__c__93__" stoichiometry="0.205" constant="true"/>
+          <speciesReference species="M_gln__45__L__91__c__93__" stoichiometry="0.2557" constant="true"/>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="4.9414" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="59.81" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="3.547" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="13.0279" constant="true"/>
+          <speciesReference species="M_oaa__91__c__93__" stoichiometry="1.7867" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="0.5191" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="2.8328" constant="true"/>
+          <speciesReference species="M_r5p__91__c__93__" stoichiometry="0.8977" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="59.81" constant="true"/>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="4.1182" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="3.7478" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="59.81" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="3.547" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="13.0279" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="59.81" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_CO2t" name="CO2 transporter via diffusion" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_co2__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_s0001"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_CS" name="citrate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_oaa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_cit__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b0720"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_CYTBD" name="cytochrome oxidase bd (ubiquinol-8: 2 protons)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_o2__91__c__93__" stoichiometry="0.5" constant="true"/>
+          <speciesReference species="M_q8h2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_q8__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b0978"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b0979"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b0733"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b0734"/>
+            </fbc:and>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_D_LACt2" name="D-lactate transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_lac__45__D__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_lac__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2975"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b3603"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ENO" name="enolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_2pg__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b2779"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ETOHt2r" name="ethanol reversible transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_etoh__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_etoh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_EX_ac__40__e__41__" name="Acetate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_ac__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_acald__40__e__41__" name="Acetaldehyde exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_acald__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_akg__40__e__41__" name="2-Oxoglutarate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_akg__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_co2__40__e__41__" name="CO2 exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_co2__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_etoh__40__e__41__" name="Ethanol exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_etoh__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_for__40__e__41__" name="Formate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_for__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_fru__40__e__41__" name="D-Fructose exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fru__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_fum__40__e__41__" name="Fumarate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fum__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_glc__40__e__41__" name="D-Glucose exchange" reversible="true" fast="false" fbc:lowerFluxBound="R_EX_glc__40__e__41___lower_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_glc__45__D__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_gln_L__40__e__41__" name="L-Glutamine exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_gln__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_glu_L__40__e__41__" name="L-Glutamate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_glu__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_h__40__e__41__" name="H+ exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_h2o__40__e__41__" name="H2O exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h2o__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_lac_D__40__e__41__" name="D-Lactate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_lac__45__D__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_mal_L__40__e__41__" name="L-Malate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_mal__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_nh4__40__e__41__" name="Ammonium exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_nh4__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_o2__40__e__41__" name="O2 exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_o2__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_pi__40__e__41__" name="Phosphate exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_pi__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_pyr__40__e__41__" name="Pyruvate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_pyr__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_EX_succ__40__e__41__" name="Succinate exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_succ__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_FBA" name="fructose-bisphosphate aldolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fdp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_dhap__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2097"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1773"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2925"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FBP" name="fructose-bisphosphatase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fdp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3925"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4232"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FORt2" name="formate transport via proton symport (uptake only)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_for__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_for__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0904"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2492"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FORti" name="formate transport via diffusion" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_for__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_for__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0904"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2492"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FRD7" name="fumarate reductase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fum__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_q8h2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_q8__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b4151"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4152"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4153"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4154"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FRUpts2" name="Fructose transport via PEP:Pyr PTS (f6p generating)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fru__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b1817"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1818"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1819"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2415"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2416"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FUM" name="fumarase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fum__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b1612"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4122"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1611"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_FUMt2_2" name="Fumarate transport via proton symport (2 H)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_fum__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="2" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_fum__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3528"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_G6PDH2r" name="glucose 6-phosphate dehydrogenase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_g6p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_6pgl__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1852"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GAPD" name="glyceraldehyde-3-phosphate dehydrogenase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_13dpg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1779"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLCpts" name="D-glucose transport via PEP:Pyr PTS" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_glc__45__D__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_g6p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b2417"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b1101"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2415"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2416"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b1817"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b1818"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b1819"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2415"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2416"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b2417"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b1621"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2415"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2416"/>
+            </fbc:and>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLNS" name="glutamine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nh4__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_gln__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3870"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1297"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLNabc" name="L-glutamine transport via ABC system" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_gln__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_gln__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b0811"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0810"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0809"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLUDy" name="glutamate dehydrogenase (NADP)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nh4__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1761"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLUN" name="glutaminase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_gln__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nh4__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b1812"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0485"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1524"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLUSy" name="glutamate synthase (NADPH)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_gln__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b3212"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b3213"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GLUt2r" name="L-glutamate transport via proton symport, reversible (periplasm)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_glu__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_glu__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b4077"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_GND" name="phosphogluconate dehydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_6pgc__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_ru5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b2029"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_H2Ot" name="H2O transport via diffusion" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h2o__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b0875"/>
+            <fbc:geneProductRef fbc:geneProduct="G_s0001"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ICDHyr" name="isocitrate dehydrogenase (NADP)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_icit__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_akg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1136"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ICL" name="Isocitrate lyase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_icit__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_glx__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b4015"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_LDH_D" name="D lactate dehydrogenase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_lac__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2133"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1380"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_MALS" name="malate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_glx__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b4014"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2976"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_MALt2_2" name="Malate transport via proton symport (2 H)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_mal__45__L__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3528"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_MDH" name="malate dehydrogenase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_oaa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3236"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ME1" name="malic enzyme (NAD)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1479"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_ME2" name="malic enzyme (NADP)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_mal__45__L__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b2463"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_NADH16" name="NADH dehydrogenase (ubiquinone-8 &amp; 3 protons)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="4" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_q8__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="3" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_q8h2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b2276"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2277"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2278"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2279"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2280"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2281"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2282"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2283"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2284"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2285"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2286"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2287"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2288"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_NADTRHD" name="NAD transhydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3962"/>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b1602"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b1603"/>
+            </fbc:and>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_NH4t" name="ammonia reversible transport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_nh4__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_nh4__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_s0001"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0451"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_O2t" name="o2 transport via diffusion" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_o2__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_o2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_s0001"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PDH" name="pyruvate dehydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b0114"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0115"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0116"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PFK" name="phosphofructokinase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_fdp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3916"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1723"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PFL" name="pyruvate formate lyase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_for__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b0902"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b0903"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b2579"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b0902"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b0903"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b0902"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3114"/>
+            </fbc:and>
+            <fbc:and>
+              <fbc:geneProductRef fbc:geneProduct="G_b3951"/>
+              <fbc:geneProductRef fbc:geneProduct="G_b3952"/>
+            </fbc:and>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PGI" name="glucose-6-phosphate isomerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_g6p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b4025"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PGK" name="phosphoglycerate kinase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_3pg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_13dpg__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b2926"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PGL" name="6-phosphogluconolactonase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_6pgl__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_6pgc__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b0767"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PGM" name="phosphoglycerate mutase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_2pg__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_3pg__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3612"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4395"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0755"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PIt2r" name="phosphate reversible transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2987"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b3493"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PPC" name="phosphoenolpyruvate carboxylase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_oaa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3956"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PPCK" name="phosphoenolpyruvate carboxykinase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_oaa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_co2__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3403"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PPS" name="phosphoenolpyruvate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h2o__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_amp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b1702"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PTAr" name="phosphotransacetylase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_accoa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_actp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2297"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2458"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PYK" name="pyruvate kinase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pep__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b1854"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1676"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_PYRt2r" name="pyruvate reversible transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pyr__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_RPE" name="ribulose 5-phosphate 3-epimerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_ru5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_xu5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b3386"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4301"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RPI" name="ribose-5-phosphate isomerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_r5p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_ru5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2914"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b4090"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_SUCCt2_2" name="succinate transport via proton symport (2 H)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_succ__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3528"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_SUCCt3" name="succinate transport out via proton antiport" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__e__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_SUCDi" name="succinate dehydrogenase (irreversible)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_q8__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_fum__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_q8h2__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b0721"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0722"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0723"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0724"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_SUCOAS" name="succinyl-CoA synthetase (ADP-forming)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_atp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succ__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_pi__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succoa__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b0728"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0729"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_TALA" name="transaldolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_s7p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_e4p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2464"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b0008"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_THD2" name="NAD(P) transhydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_h__91__e__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_nadh__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadp__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_h__91__c__93__" stoichiometry="2" constant="true"/>
+          <speciesReference species="M_nad__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadph__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_b1602"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b1603"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_TKT1" name="transketolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_r5p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_xu5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_s7p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2935"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2465"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_TKT2" name="transketolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_e4p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_xu5p__45__D__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p__91__c__93__" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_b2935"/>
+            <fbc:geneProductRef fbc:geneProduct="G_b2465"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_TPI" name="triose-phosphate isomerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_dhap__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_g3p__91__c__93__" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_b3919"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+    </listOfReactions>
+    <fbc:listOfObjectives fbc:activeObjective="obj">
+      <fbc:objective fbc:id="obj" fbc:type="maximize">
+        <fbc:listOfFluxObjectives>
+          <fbc:fluxObjective fbc:reaction="R_Biomass_Ecoli_core_w_GAM" fbc:coefficient="1"/>
+        </fbc:listOfFluxObjectives>
+      </fbc:objective>
+    </fbc:listOfObjectives>
+    <fbc:listOfGeneProducts>
+      <fbc:geneProduct fbc:id="G_b0008" fbc:name="G_b0008" fbc:label="G_b0008"/>
+      <fbc:geneProduct fbc:id="G_b0114" fbc:name="G_b0114" fbc:label="G_b0114"/>
+      <fbc:geneProduct fbc:id="G_b0115" fbc:name="G_b0115" fbc:label="G_b0115"/>
+      <fbc:geneProduct fbc:id="G_b0116" fbc:name="G_b0116" fbc:label="G_b0116"/>
+      <fbc:geneProduct fbc:id="G_b0118" fbc:name="G_b0118" fbc:label="G_b0118"/>
+      <fbc:geneProduct fbc:id="G_b0351" fbc:name="G_b0351" fbc:label="G_b0351"/>
+      <fbc:geneProduct fbc:id="G_b0356" fbc:name="G_b0356" fbc:label="G_b0356"/>
+      <fbc:geneProduct fbc:id="G_b0451" fbc:name="G_b0451" fbc:label="G_b0451"/>
+      <fbc:geneProduct fbc:id="G_b0474" fbc:name="G_b0474" fbc:label="G_b0474"/>
+      <fbc:geneProduct fbc:id="G_b0485" fbc:name="G_b0485" fbc:label="G_b0485"/>
+      <fbc:geneProduct fbc:id="G_b0720" fbc:name="G_b0720" fbc:label="G_b0720"/>
+      <fbc:geneProduct fbc:id="G_b0721" fbc:name="G_b0721" fbc:label="G_b0721"/>
+      <fbc:geneProduct fbc:id="G_b0722" fbc:name="G_b0722" fbc:label="G_b0722"/>
+      <fbc:geneProduct fbc:id="G_b0723" fbc:name="G_b0723" fbc:label="G_b0723"/>
+      <fbc:geneProduct fbc:id="G_b0724" fbc:name="G_b0724" fbc:label="G_b0724"/>
+      <fbc:geneProduct fbc:id="G_b0726" fbc:name="G_b0726" fbc:label="G_b0726"/>
+      <fbc:geneProduct fbc:id="G_b0727" fbc:name="G_b0727" fbc:label="G_b0727"/>
+      <fbc:geneProduct fbc:id="G_b0728" fbc:name="G_b0728" fbc:label="G_b0728"/>
+      <fbc:geneProduct fbc:id="G_b0729" fbc:name="G_b0729" fbc:label="G_b0729"/>
+      <fbc:geneProduct fbc:id="G_b0733" fbc:name="G_b0733" fbc:label="G_b0733"/>
+      <fbc:geneProduct fbc:id="G_b0734" fbc:name="G_b0734" fbc:label="G_b0734"/>
+      <fbc:geneProduct fbc:id="G_b0755" fbc:name="G_b0755" fbc:label="G_b0755"/>
+      <fbc:geneProduct fbc:id="G_b0767" fbc:name="G_b0767" fbc:label="G_b0767"/>
+      <fbc:geneProduct fbc:id="G_b0809" fbc:name="G_b0809" fbc:label="G_b0809"/>
+      <fbc:geneProduct fbc:id="G_b0810" fbc:name="G_b0810" fbc:label="G_b0810"/>
+      <fbc:geneProduct fbc:id="G_b0811" fbc:name="G_b0811" fbc:label="G_b0811"/>
+      <fbc:geneProduct fbc:id="G_b0875" fbc:name="G_b0875" fbc:label="G_b0875"/>
+      <fbc:geneProduct fbc:id="G_b0902" fbc:name="G_b0902" fbc:label="G_b0902"/>
+      <fbc:geneProduct fbc:id="G_b0903" fbc:name="G_b0903" fbc:label="G_b0903"/>
+      <fbc:geneProduct fbc:id="G_b0904" fbc:name="G_b0904" fbc:label="G_b0904"/>
+      <fbc:geneProduct fbc:id="G_b0978" fbc:name="G_b0978" fbc:label="G_b0978"/>
+      <fbc:geneProduct fbc:id="G_b0979" fbc:name="G_b0979" fbc:label="G_b0979"/>
+      <fbc:geneProduct fbc:id="G_b1101" fbc:name="G_b1101" fbc:label="G_b1101"/>
+      <fbc:geneProduct fbc:id="G_b1136" fbc:name="G_b1136" fbc:label="G_b1136"/>
+      <fbc:geneProduct fbc:id="G_b1241" fbc:name="G_b1241" fbc:label="G_b1241"/>
+      <fbc:geneProduct fbc:id="G_b1276" fbc:name="G_b1276" fbc:label="G_b1276"/>
+      <fbc:geneProduct fbc:id="G_b1297" fbc:name="G_b1297" fbc:label="G_b1297"/>
+      <fbc:geneProduct fbc:id="G_b1380" fbc:name="G_b1380" fbc:label="G_b1380"/>
+      <fbc:geneProduct fbc:id="G_b1478" fbc:name="G_b1478" fbc:label="G_b1478"/>
+      <fbc:geneProduct fbc:id="G_b1479" fbc:name="G_b1479" fbc:label="G_b1479"/>
+      <fbc:geneProduct fbc:id="G_b1524" fbc:name="G_b1524" fbc:label="G_b1524"/>
+      <fbc:geneProduct fbc:id="G_b1602" fbc:name="G_b1602" fbc:label="G_b1602"/>
+      <fbc:geneProduct fbc:id="G_b1603" fbc:name="G_b1603" fbc:label="G_b1603"/>
+      <fbc:geneProduct fbc:id="G_b1611" fbc:name="G_b1611" fbc:label="G_b1611"/>
+      <fbc:geneProduct fbc:id="G_b1612" fbc:name="G_b1612" fbc:label="G_b1612"/>
+      <fbc:geneProduct fbc:id="G_b1621" fbc:name="G_b1621" fbc:label="G_b1621"/>
+      <fbc:geneProduct fbc:id="G_b1676" fbc:name="G_b1676" fbc:label="G_b1676"/>
+      <fbc:geneProduct fbc:id="G_b1702" fbc:name="G_b1702" fbc:label="G_b1702"/>
+      <fbc:geneProduct fbc:id="G_b1723" fbc:name="G_b1723" fbc:label="G_b1723"/>
+      <fbc:geneProduct fbc:id="G_b1761" fbc:name="G_b1761" fbc:label="G_b1761"/>
+      <fbc:geneProduct fbc:id="G_b1773" fbc:name="G_b1773" fbc:label="G_b1773"/>
+      <fbc:geneProduct fbc:id="G_b1779" fbc:name="G_b1779" fbc:label="G_b1779"/>
+      <fbc:geneProduct fbc:id="G_b1812" fbc:name="G_b1812" fbc:label="G_b1812"/>
+      <fbc:geneProduct fbc:id="G_b1817" fbc:name="G_b1817" fbc:label="G_b1817"/>
+      <fbc:geneProduct fbc:id="G_b1818" fbc:name="G_b1818" fbc:label="G_b1818"/>
+      <fbc:geneProduct fbc:id="G_b1819" fbc:name="G_b1819" fbc:label="G_b1819"/>
+      <fbc:geneProduct fbc:id="G_b1849" fbc:name="G_b1849" fbc:label="G_b1849"/>
+      <fbc:geneProduct fbc:id="G_b1852" fbc:name="G_b1852" fbc:label="G_b1852"/>
+      <fbc:geneProduct fbc:id="G_b1854" fbc:name="G_b1854" fbc:label="G_b1854"/>
+      <fbc:geneProduct fbc:id="G_b2029" fbc:name="G_b2029" fbc:label="G_b2029"/>
+      <fbc:geneProduct fbc:id="G_b2097" fbc:name="G_b2097" fbc:label="G_b2097"/>
+      <fbc:geneProduct fbc:id="G_b2133" fbc:name="G_b2133" fbc:label="G_b2133"/>
+      <fbc:geneProduct fbc:id="G_b2276" fbc:name="G_b2276" fbc:label="G_b2276"/>
+      <fbc:geneProduct fbc:id="G_b2277" fbc:name="G_b2277" fbc:label="G_b2277"/>
+      <fbc:geneProduct fbc:id="G_b2278" fbc:name="G_b2278" fbc:label="G_b2278"/>
+      <fbc:geneProduct fbc:id="G_b2279" fbc:name="G_b2279" fbc:label="G_b2279"/>
+      <fbc:geneProduct fbc:id="G_b2280" fbc:name="G_b2280" fbc:label="G_b2280"/>
+      <fbc:geneProduct fbc:id="G_b2281" fbc:name="G_b2281" fbc:label="G_b2281"/>
+      <fbc:geneProduct fbc:id="G_b2282" fbc:name="G_b2282" fbc:label="G_b2282"/>
+      <fbc:geneProduct fbc:id="G_b2283" fbc:name="G_b2283" fbc:label="G_b2283"/>
+      <fbc:geneProduct fbc:id="G_b2284" fbc:name="G_b2284" fbc:label="G_b2284"/>
+      <fbc:geneProduct fbc:id="G_b2285" fbc:name="G_b2285" fbc:label="G_b2285"/>
+      <fbc:geneProduct fbc:id="G_b2286" fbc:name="G_b2286" fbc:label="G_b2286"/>
+      <fbc:geneProduct fbc:id="G_b2287" fbc:name="G_b2287" fbc:label="G_b2287"/>
+      <fbc:geneProduct fbc:id="G_b2288" fbc:name="G_b2288" fbc:label="G_b2288"/>
+      <fbc:geneProduct fbc:id="G_b2296" fbc:name="G_b2296" fbc:label="G_b2296"/>
+      <fbc:geneProduct fbc:id="G_b2297" fbc:name="G_b2297" fbc:label="G_b2297"/>
+      <fbc:geneProduct fbc:id="G_b2415" fbc:name="G_b2415" fbc:label="G_b2415"/>
+      <fbc:geneProduct fbc:id="G_b2416" fbc:name="G_b2416" fbc:label="G_b2416"/>
+      <fbc:geneProduct fbc:id="G_b2417" fbc:name="G_b2417" fbc:label="G_b2417"/>
+      <fbc:geneProduct fbc:id="G_b2458" fbc:name="G_b2458" fbc:label="G_b2458"/>
+      <fbc:geneProduct fbc:id="G_b2463" fbc:name="G_b2463" fbc:label="G_b2463"/>
+      <fbc:geneProduct fbc:id="G_b2464" fbc:name="G_b2464" fbc:label="G_b2464"/>
+      <fbc:geneProduct fbc:id="G_b2465" fbc:name="G_b2465" fbc:label="G_b2465"/>
+      <fbc:geneProduct fbc:id="G_b2492" fbc:name="G_b2492" fbc:label="G_b2492"/>
+      <fbc:geneProduct fbc:id="G_b2579" fbc:name="G_b2579" fbc:label="G_b2579"/>
+      <fbc:geneProduct fbc:id="G_b2587" fbc:name="G_b2587" fbc:label="G_b2587"/>
+      <fbc:geneProduct fbc:id="G_b2779" fbc:name="G_b2779" fbc:label="G_b2779"/>
+      <fbc:geneProduct fbc:id="G_b2914" fbc:name="G_b2914" fbc:label="G_b2914"/>
+      <fbc:geneProduct fbc:id="G_b2925" fbc:name="G_b2925" fbc:label="G_b2925"/>
+      <fbc:geneProduct fbc:id="G_b2926" fbc:name="G_b2926" fbc:label="G_b2926"/>
+      <fbc:geneProduct fbc:id="G_b2935" fbc:name="G_b2935" fbc:label="G_b2935"/>
+      <fbc:geneProduct fbc:id="G_b2975" fbc:name="G_b2975" fbc:label="G_b2975"/>
+      <fbc:geneProduct fbc:id="G_b2976" fbc:name="G_b2976" fbc:label="G_b2976"/>
+      <fbc:geneProduct fbc:id="G_b2987" fbc:name="G_b2987" fbc:label="G_b2987"/>
+      <fbc:geneProduct fbc:id="G_b3114" fbc:name="G_b3114" fbc:label="G_b3114"/>
+      <fbc:geneProduct fbc:id="G_b3115" fbc:name="G_b3115" fbc:label="G_b3115"/>
+      <fbc:geneProduct fbc:id="G_b3212" fbc:name="G_b3212" fbc:label="G_b3212"/>
+      <fbc:geneProduct fbc:id="G_b3213" fbc:name="G_b3213" fbc:label="G_b3213"/>
+      <fbc:geneProduct fbc:id="G_b3236" fbc:name="G_b3236" fbc:label="G_b3236"/>
+      <fbc:geneProduct fbc:id="G_b3386" fbc:name="G_b3386" fbc:label="G_b3386"/>
+      <fbc:geneProduct fbc:id="G_b3403" fbc:name="G_b3403" fbc:label="G_b3403"/>
+      <fbc:geneProduct fbc:id="G_b3493" fbc:name="G_b3493" fbc:label="G_b3493"/>
+      <fbc:geneProduct fbc:id="G_b3528" fbc:name="G_b3528" fbc:label="G_b3528"/>
+      <fbc:geneProduct fbc:id="G_b3603" fbc:name="G_b3603" fbc:label="G_b3603"/>
+      <fbc:geneProduct fbc:id="G_b3612" fbc:name="G_b3612" fbc:label="G_b3612"/>
+      <fbc:geneProduct fbc:id="G_b3731" fbc:name="G_b3731" fbc:label="G_b3731"/>
+      <fbc:geneProduct fbc:id="G_b3732" fbc:name="G_b3732" fbc:label="G_b3732"/>
+      <fbc:geneProduct fbc:id="G_b3733" fbc:name="G_b3733" fbc:label="G_b3733"/>
+      <fbc:geneProduct fbc:id="G_b3734" fbc:name="G_b3734" fbc:label="G_b3734"/>
+      <fbc:geneProduct fbc:id="G_b3735" fbc:name="G_b3735" fbc:label="G_b3735"/>
+      <fbc:geneProduct fbc:id="G_b3736" fbc:name="G_b3736" fbc:label="G_b3736"/>
+      <fbc:geneProduct fbc:id="G_b3737" fbc:name="G_b3737" fbc:label="G_b3737"/>
+      <fbc:geneProduct fbc:id="G_b3738" fbc:name="G_b3738" fbc:label="G_b3738"/>
+      <fbc:geneProduct fbc:id="G_b3739" fbc:name="G_b3739" fbc:label="G_b3739"/>
+      <fbc:geneProduct fbc:id="G_b3870" fbc:name="G_b3870" fbc:label="G_b3870"/>
+      <fbc:geneProduct fbc:id="G_b3916" fbc:name="G_b3916" fbc:label="G_b3916"/>
+      <fbc:geneProduct fbc:id="G_b3919" fbc:name="G_b3919" fbc:label="G_b3919"/>
+      <fbc:geneProduct fbc:id="G_b3925" fbc:name="G_b3925" fbc:label="G_b3925"/>
+      <fbc:geneProduct fbc:id="G_b3951" fbc:name="G_b3951" fbc:label="G_b3951"/>
+      <fbc:geneProduct fbc:id="G_b3952" fbc:name="G_b3952" fbc:label="G_b3952"/>
+      <fbc:geneProduct fbc:id="G_b3956" fbc:name="G_b3956" fbc:label="G_b3956"/>
+      <fbc:geneProduct fbc:id="G_b3962" fbc:name="G_b3962" fbc:label="G_b3962"/>
+      <fbc:geneProduct fbc:id="G_b4014" fbc:name="G_b4014" fbc:label="G_b4014"/>
+      <fbc:geneProduct fbc:id="G_b4015" fbc:name="G_b4015" fbc:label="G_b4015"/>
+      <fbc:geneProduct fbc:id="G_b4025" fbc:name="G_b4025" fbc:label="G_b4025"/>
+      <fbc:geneProduct fbc:id="G_b4077" fbc:name="G_b4077" fbc:label="G_b4077"/>
+      <fbc:geneProduct fbc:id="G_b4090" fbc:name="G_b4090" fbc:label="G_b4090"/>
+      <fbc:geneProduct fbc:id="G_b4122" fbc:name="G_b4122" fbc:label="G_b4122"/>
+      <fbc:geneProduct fbc:id="G_b4151" fbc:name="G_b4151" fbc:label="G_b4151"/>
+      <fbc:geneProduct fbc:id="G_b4152" fbc:name="G_b4152" fbc:label="G_b4152"/>
+      <fbc:geneProduct fbc:id="G_b4153" fbc:name="G_b4153" fbc:label="G_b4153"/>
+      <fbc:geneProduct fbc:id="G_b4154" fbc:name="G_b4154" fbc:label="G_b4154"/>
+      <fbc:geneProduct fbc:id="G_b4232" fbc:name="G_b4232" fbc:label="G_b4232"/>
+      <fbc:geneProduct fbc:id="G_b4301" fbc:name="G_b4301" fbc:label="G_b4301"/>
+      <fbc:geneProduct fbc:id="G_b4395" fbc:name="G_b4395" fbc:label="G_b4395"/>
+      <fbc:geneProduct fbc:id="G_s0001" fbc:name="G_s0001" fbc:label="G_s0001"/>
+    </fbc:listOfGeneProducts>
+    <groups:listOfGroups>
+      <groups:group metaid="meta_G_" sboTerm="SBO:0000633" groups:id="G_" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="Biomass Objective Function with GAM" groups:idRef="R_Biomass_Ecoli_core_w_GAM"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Anaplerotic__32__reactions" sboTerm="SBO:0000633" groups:id="G_Anaplerotic__32__reactions" groups:name="Anaplerotic reactions" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="malic enzyme (NAD)" groups:idRef="R_ME1"/>
+          <groups:member groups:name="malic enzyme (NADP)" groups:idRef="R_ME2"/>
+          <groups:member groups:name="malate synthase" groups:idRef="R_MALS"/>
+          <groups:member groups:name="phosphoenolpyruvate carboxylase" groups:idRef="R_PPC"/>
+          <groups:member groups:name="Isocitrate lyase" groups:idRef="R_ICL"/>
+          <groups:member groups:name="phosphoenolpyruvate carboxykinase" groups:idRef="R_PPCK"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Citric__32__Acid__32__Cycle" sboTerm="SBO:0000633" groups:id="G_Citric__32__Acid__32__Cycle" groups:name="Citric Acid Cycle" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="succinyl-CoA synthetase (ADP-forming)" groups:idRef="R_SUCOAS"/>
+          <groups:member groups:name="isocitrate dehydrogenase (NADP)" groups:idRef="R_ICDHyr"/>
+          <groups:member groups:name="fumarase" groups:idRef="R_FUM"/>
+          <groups:member groups:name="malate dehydrogenase" groups:idRef="R_MDH"/>
+          <groups:member groups:name="citrate synthase" groups:idRef="R_CS"/>
+          <groups:member groups:name="aconitase (half-reaction B, Isocitrate hydro-lyase)" groups:idRef="R_ACONTb"/>
+          <groups:member groups:name="2-Oxoglutarate dehydrogenase" groups:idRef="R_AKGDH"/>
+          <groups:member groups:name="aconitase (half-reaction A, Citrate hydro-lyase)" groups:idRef="R_ACONTa"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Exchange" sboTerm="SBO:0000633" groups:id="G_Exchange" groups:name="Exchange" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="Succinate exchange" groups:idRef="R_EX_succ__40__e__41__"/>
+          <groups:member groups:name="Ammonium exchange" groups:idRef="R_EX_nh4__40__e__41__"/>
+          <groups:member groups:name="L-Glutamine exchange" groups:idRef="R_EX_gln_L__40__e__41__"/>
+          <groups:member groups:name="Formate exchange" groups:idRef="R_EX_for__40__e__41__"/>
+          <groups:member groups:name="H+ exchange" groups:idRef="R_EX_h__40__e__41__"/>
+          <groups:member groups:name="Ethanol exchange" groups:idRef="R_EX_etoh__40__e__41__"/>
+          <groups:member groups:name="O2 exchange" groups:idRef="R_EX_o2__40__e__41__"/>
+          <groups:member groups:name="Fumarate exchange" groups:idRef="R_EX_fum__40__e__41__"/>
+          <groups:member groups:name="Acetaldehyde exchange" groups:idRef="R_EX_acald__40__e__41__"/>
+          <groups:member groups:name="D-Fructose exchange" groups:idRef="R_EX_fru__40__e__41__"/>
+          <groups:member groups:name="L-Malate exchange" groups:idRef="R_EX_mal_L__40__e__41__"/>
+          <groups:member groups:name="L-Glutamate exchange" groups:idRef="R_EX_glu_L__40__e__41__"/>
+          <groups:member groups:name="Pyruvate exchange" groups:idRef="R_EX_pyr__40__e__41__"/>
+          <groups:member groups:name="Phosphate exchange" groups:idRef="R_EX_pi__40__e__41__"/>
+          <groups:member groups:name="CO2 exchange" groups:idRef="R_EX_co2__40__e__41__"/>
+          <groups:member groups:name="H2O exchange" groups:idRef="R_EX_h2o__40__e__41__"/>
+          <groups:member groups:name="D-Glucose exchange" groups:idRef="R_EX_glc__40__e__41__"/>
+          <groups:member groups:name="D-Lactate exchange" groups:idRef="R_EX_lac_D__40__e__41__"/>
+          <groups:member groups:name="2-Oxoglutarate exchange" groups:idRef="R_EX_akg__40__e__41__"/>
+          <groups:member groups:name="Acetate exchange" groups:idRef="R_EX_ac__40__e__41__"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Glutamate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Glutamate__32__Metabolism" groups:name="Glutamate Metabolism" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="glutaminase" groups:idRef="R_GLUN"/>
+          <groups:member groups:name="glutamate dehydrogenase (NADP)" groups:idRef="R_GLUDy"/>
+          <groups:member groups:name="glutamine synthetase" groups:idRef="R_GLNS"/>
+          <groups:member groups:name="glutamate synthase (NADPH)" groups:idRef="R_GLUSy"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Glycolysis__47__Gluconeogenesis" sboTerm="SBO:0000633" groups:id="G_Glycolysis__47__Gluconeogenesis" groups:name="Glycolysis/Gluconeogenesis" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="pyruvate kinase" groups:idRef="R_PYK"/>
+          <groups:member groups:name="enolase" groups:idRef="R_ENO"/>
+          <groups:member groups:name="phosphoglycerate mutase" groups:idRef="R_PGM"/>
+          <groups:member groups:name="pyruvate dehydrogenase" groups:idRef="R_PDH"/>
+          <groups:member groups:name="glucose-6-phosphate isomerase" groups:idRef="R_PGI"/>
+          <groups:member groups:name="phosphoenolpyruvate synthase" groups:idRef="R_PPS"/>
+          <groups:member groups:name="fructose-bisphosphatase" groups:idRef="R_FBP"/>
+          <groups:member groups:name="glyceraldehyde-3-phosphate dehydrogenase" groups:idRef="R_GAPD"/>
+          <groups:member groups:name="phosphofructokinase" groups:idRef="R_PFK"/>
+          <groups:member groups:name="triose-phosphate isomerase" groups:idRef="R_TPI"/>
+          <groups:member groups:name="fructose-bisphosphate aldolase" groups:idRef="R_FBA"/>
+          <groups:member groups:name="phosphoglycerate kinase" groups:idRef="R_PGK"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Inorganic__32__Ion__32__Transport__32__and__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Inorganic__32__Ion__32__Transport__32__and__32__Metabolism" groups:name="Inorganic Ion Transport and Metabolism" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="ammonia reversible transport" groups:idRef="R_NH4t"/>
+          <groups:member groups:name="phosphate reversible transport via proton symport" groups:idRef="R_PIt2r"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Oxidative__32__Phosphorylation" sboTerm="SBO:0000633" groups:id="G_Oxidative__32__Phosphorylation" groups:name="Oxidative Phosphorylation" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="succinate dehydrogenase (irreversible)" groups:idRef="R_SUCDi"/>
+          <groups:member groups:name="NAD(P) transhydrogenase" groups:idRef="R_THD2"/>
+          <groups:member groups:name="NADH dehydrogenase (ubiquinone-8 &amp; 3 protons)" groups:idRef="R_NADH16"/>
+          <groups:member groups:name="cytochrome oxidase bd (ubiquinol-8: 2 protons)" groups:idRef="R_CYTBD"/>
+          <groups:member groups:name="ATP maintenance requirement" groups:idRef="R_ATPM"/>
+          <groups:member groups:name="fumarate reductase" groups:idRef="R_FRD7"/>
+          <groups:member groups:name="adenylate kinase" groups:idRef="R_ADK1"/>
+          <groups:member groups:name="ATP synthase (four protons for one ATP)" groups:idRef="R_ATPS4r"/>
+          <groups:member groups:name="NAD transhydrogenase" groups:idRef="R_NADTRHD"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Pentose__32__Phosphate__32__Pathway" sboTerm="SBO:0000633" groups:id="G_Pentose__32__Phosphate__32__Pathway" groups:name="Pentose Phosphate Pathway" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="transketolase" groups:idRef="R_TKT2"/>
+          <groups:member groups:name="phosphogluconate dehydrogenase" groups:idRef="R_GND"/>
+          <groups:member groups:name="6-phosphogluconolactonase" groups:idRef="R_PGL"/>
+          <groups:member groups:name="transaldolase" groups:idRef="R_TALA"/>
+          <groups:member groups:name="ribose-5-phosphate isomerase" groups:idRef="R_RPI"/>
+          <groups:member groups:name="ribulose 5-phosphate 3-epimerase" groups:idRef="R_RPE"/>
+          <groups:member groups:name="glucose 6-phosphate dehydrogenase" groups:idRef="R_G6PDH2r"/>
+          <groups:member groups:name="transketolase" groups:idRef="R_TKT1"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Pyruvate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Pyruvate__32__Metabolism" groups:name="Pyruvate Metabolism" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="D lactate dehydrogenase" groups:idRef="R_LDH_D"/>
+          <groups:member groups:name="pyruvate formate lyase" groups:idRef="R_PFL"/>
+          <groups:member groups:name="phosphotransacetylase" groups:idRef="R_PTAr"/>
+          <groups:member groups:name="acetate kinase" groups:idRef="R_ACKr"/>
+          <groups:member groups:name="acetaldehyde dehydrogenase (acetylating)" groups:idRef="R_ACALD"/>
+          <groups:member groups:name="alcohol dehydrogenase (ethanol)" groups:idRef="R_ALCD2x"/>
+        </groups:listOfMembers>
+      </groups:group>
+      <groups:group metaid="meta_G_Transport__44____32__Extracellular" sboTerm="SBO:0000633" groups:id="G_Transport__44____32__Extracellular" groups:name="Transport, Extracellular" groups:kind="partonomy">
+        <groups:listOfMembers>
+          <groups:member groups:name="succinate transport via proton symport (2 H)" groups:idRef="R_SUCCt2_2"/>
+          <groups:member groups:name="D-lactate transport via proton symport" groups:idRef="R_D_LACt2"/>
+          <groups:member groups:name="2-oxoglutarate reversible transport via symport" groups:idRef="R_AKGt2r"/>
+          <groups:member groups:name="H2O transport via diffusion" groups:idRef="R_H2Ot"/>
+          <groups:member groups:name="L-glutamate transport via proton symport, reversible (periplasm)" groups:idRef="R_GLUt2r"/>
+          <groups:member groups:name="Fumarate transport via proton symport (2 H)" groups:idRef="R_FUMt2_2"/>
+          <groups:member groups:name="CO2 transporter via diffusion" groups:idRef="R_CO2t"/>
+          <groups:member groups:name="acetaldehyde reversible transport" groups:idRef="R_ACALDt"/>
+          <groups:member groups:name="acetate reversible transport via proton symport" groups:idRef="R_ACt2r"/>
+          <groups:member groups:name="L-glutamine transport via ABC system" groups:idRef="R_GLNabc"/>
+          <groups:member groups:name="Fructose transport via PEP:Pyr PTS (f6p generating)" groups:idRef="R_FRUpts2"/>
+          <groups:member groups:name="D-glucose transport via PEP:Pyr PTS" groups:idRef="R_GLCpts"/>
+          <groups:member groups:name="pyruvate reversible transport via proton symport" groups:idRef="R_PYRt2r"/>
+          <groups:member groups:name="formate transport via proton symport (uptake only)" groups:idRef="R_FORt2"/>
+          <groups:member groups:name="ethanol reversible transport via proton symport" groups:idRef="R_ETOHt2r"/>
+          <groups:member groups:name="formate transport via diffusion" groups:idRef="R_FORti"/>
+          <groups:member groups:name="Malate transport via proton symport (2 H)" groups:idRef="R_MALt2_2"/>
+          <groups:member groups:name="o2 transport via diffusion" groups:idRef="R_O2t"/>
+          <groups:member groups:name="succinate transport out via proton antiport" groups:idRef="R_SUCCt3"/>
+        </groups:listOfMembers>
+      </groups:group>
+    </groups:listOfGroups>
+  </model>
+</sbml>
