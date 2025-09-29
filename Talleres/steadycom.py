@@ -323,34 +323,42 @@ def _build_metabolite_reaction_lookup(cobra_model: cobra.Model):
             table[met.id][rxn.id] = float(coeff)
     return table
 
-def build_problem(community: Community, growth=1.0, bigM=1e6):
+def build_problem(community: Community, growth=1.0, bigM=1000.0):
+    """
+    Builds the SteadyCom LP for the given community.
+    """
     model  = community.merged_model
     solver = GurobiSteadyComSolver(name=f"steadycom_{community.id}")
 
-    # 1) Variables de abundancia
+    # Abundance variables x_org in [0,1]
     for org_id in community.organisms:
         solver.add_variable(f"x_{org_id}", 0.0, 1.0)
 
-    # 2) Variables de flujo
+    # Flux variables v_r for ALL merged reactions
     for rxn in model.reactions:
         if rxn.boundary:
-            # EX comunitarias: mantener sus bounds originales
             solver.add_variable(rxn.id, rxn.lower_bound, rxn.upper_bound)
         else:
-            # Internas (incluida biomasa): variables "libres" y límites vía x-org
-            solver.add_variable(rxn.id, -GRB.INFINITY, GRB.INFINITY)
+            lb = -inf if rxn.lower_bound < 0 else 0.0
+            ub =  inf if rxn.upper_bound > 0 else 0.0
+            solver.add_variable(rxn.id, lb, ub)
 
     solver.update()
 
-    # 3) S·v = 0 y sum(x)=1
-    solver.add_constraint("abundance",
-                          {f"x_{org}": 1.0 for org in community.organisms},
-                          sense='=', rhs=1.0)
+    # Sum x = 1
+    solver.add_constraint(
+        "abundance",
+        {f"x_{org}": 1.0 for org in community.organisms},
+        sense='=',
+        rhs=1.0
+    )
+
+    # S·v = 0 (mass balance for each metabolite)
     table = _build_metabolite_reaction_lookup(model)
     for m_id in table:
         solver.add_constraint(m_id, table[m_id], sense='=', rhs=0.0)
 
-    # 4) Acoplamiento por organismo
+    # Constraints per organism (bounds proportional to x_org)
     for org_id, org in community.organisms.items():
         for r_id, reaction in org.reactions.items():
             if (org_id, r_id) not in community.reaction_map:
@@ -358,32 +366,40 @@ def build_problem(community: Community, growth=1.0, bigM=1e6):
             merged_rid = community.reaction_map[(org_id, r_id)]
 
             if r_id == org.biomass_reaction:
-                # v_biomasa_org = mu * x_org
                 cname = f"g_{org_id}"
-                solver.add_constraint(cname,
-                                      {f"x_{org_id}": growth, merged_rid: -1.0},
-                                      sense='=', rhs=0.0)
+                solver.add_constraint(
+                    cname,
+                    {f"x_{org_id}": growth, merged_rid: -1.0},
+                    sense='=',
+                    rhs=0.0
+                )
                 solver.register_growth_row(org_id, cname, f"x_{org_id}", merged_rid)
             else:
-                lb0 = float(reaction.lower_bound)
-                ub0 = float(reaction.upper_bound)
+                lb = -bigM if isinf(reaction.lower_bound) else float(reaction.lower_bound)
+                ub =  bigM if isinf(reaction.upper_bound) else float(reaction.upper_bound)
 
-                # Si el bound existe (no es -inf/inf), imponlo ESCALADO por x_org
-                if not isinf(lb0):
-                    # v_r - lb0*x_org >= 0  ->  (-1)*v_r + lb0*x_org <= 0
-                    solver.add_constraint(f"lb_{merged_rid}",
-                                          {merged_rid: -1.0, f"x_{org_id}": lb0},
-                                          sense='<', rhs=0.0)
-                if not isinf(ub0):
-                    # ub0*x_org - v_r >= 0
-                    solver.add_constraint(f"ub_{merged_rid}",
-                                          {f"x_{org_id}": ub0, merged_rid: -1.0},
-                                          sense='>', rhs=0.0)
+                if lb != 0.0:
+                    # lb*x_org - v_r <= 0
+                    solver.add_constraint(
+                        f"lb_{merged_rid}",
+                        {f"x_{org_id}": lb, merged_rid: -1.0},
+                        sense='<',
+                        rhs=0.0
+                    )
+                if ub != 0.0:
+                    # ub*x_org - v_r >= 0
+                    solver.add_constraint(
+                        f"ub_{merged_rid}",
+                        {f"x_{org_id}": ub, merged_rid: -1.0},
+                        sense='>',
+                        rhs=0.0
+                    )
 
     solver.update()
+
+    # Initialize μ
     solver.update_growth(community.mu_init if growth is None else growth)
     return solver
-
 
 # =============================================================================
 # Binary search + SteadyCom/SteadyComVA APIs
@@ -427,7 +443,7 @@ def binary_search(solver, objective, obj_frac=1.0, minimize=False,
 
     return sol
 
-def SteadyCom(community: Community, medium=None, solver=None, max_iters=20):
+def SteadyCom(community: Community, medium=None, solver=None):
     """
     Solves for the steady-state growth rate of a microbial community using a constraint-based optimization approach.
 
@@ -448,7 +464,7 @@ def SteadyCom(community: Community, medium=None, solver=None, max_iters=20):
     if solver is None:
         solver = build_problem(community, growth=community.mu_init)
     objective = {community.biomass_reaction_id: 1.0}
-    sol = binary_search(solver, objective, minimize=False, constraints=medium, max_iters=max_iters)
+    sol = binary_search(solver, objective, minimize=False, constraints=medium)
     return sol
 
 def SteadyComVA(community: Community, obj_frac=1.0, medium=None, solver=None):
